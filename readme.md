@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.png"></p>
+
 
 ## About the Food Business API
 
