@@ -11,4 +11,8 @@ To get started and run the project on your own machine:
 3. Start MAMP from the public directory within the project to see the homepage and navigate to the API documentation and view the project owner's portfolio.
 4. Be sure to view the API documentation linked from the homepage and hosted on Gitbook.
 
+Credits:
+
 Thanks to Laravel for providing the framework for this API. Learn more about <a href="https://laravel.com"> Laravel. </a>
+
+Thanks to <a href="https://github.com/asethwright"> Seth Wright </a> for example and conceptual code that formed the foundation of this backend system. 
