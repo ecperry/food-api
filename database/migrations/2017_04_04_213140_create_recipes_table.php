@@ -15,10 +15,10 @@ class CreateRecipesTable extends Migration
     {
       Schema::create('recipes', function (Blueprint $table) {
         $table->increments('id');
-        $table->string('home');
-        $table->string('away');
-        $table->integer('ptsHome');
-        $table->integer('ptsAway');
+        $table->string('flavor');
+        $table->integer('preptime');
+        $table->string('season');
+        $table->integer('difficulty');
         $table->timestamps();
       });
     }

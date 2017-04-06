@@ -13,12 +13,14 @@ class CreateCustomersTable extends Migration
      */
     public function up()
     {
-      Schema::create('games', function (Blueprint $table) {
+      Schema::create('customers', function (Blueprint $table) {
         $table->increments('id');
-        $table->string('home');
-        $table->string('away');
-        $table->integer('ptsHome');
-        $table->integer('ptsAway');
+        $table->string('first');
+        $table->string('last');
+        $table->string('title');
+        $table->string('phone');
+        $table->string('email');
+        $table->boolean('new');
         $table->timestamps();
       });
     }

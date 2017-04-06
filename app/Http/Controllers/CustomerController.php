@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+
 
 class CustomerController extends Controller
 {
@@ -12,8 +16,8 @@ class CustomerController extends Controller
     // GET request
     // list
 
-    $customer = Customer::all();
-    return Response::json($customer);
+    $customers = Customer::all();
+    return Response::json($customers);
 }
 
 public function create(Request $request)
@@ -29,15 +33,15 @@ public function show ($id) {
 
   // GET /customer/$id
   // show a single game info
- $customer = Customer::find($id);
- return Response::json($customer);
+ $customers = Customer::find($id);
+ return Response::json($customers);
 }
 
 public function update (Request $request, $id) {
 // DELETE /customer/$id
 // update a single game
-$customer = Customer::find($id);
-$success = $customer->update($request->all());
+$customers = Customer::find($id);
+$success = $customers->update($request->all());
 return Response::json(['updated' => $success]);
 
 }
@@ -46,8 +50,8 @@ public function destroy ($id) {
 //DELETE /customer/$id
 // remove a single customer
 
-$Customer = Customer::find($id);
-$customer->delete();
+$customers = Customer::find($id);
+$customers->delete();
 return Response::json(['deleted' => true]);
   }
 }

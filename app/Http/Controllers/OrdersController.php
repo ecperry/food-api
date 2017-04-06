@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 class OrdersController extends Controller
 {
@@ -47,7 +49,7 @@ public function destroy ($id) {
 //DELETE /orders/$id
 // remove a single order
 
-$order = Order::find($id);
+$order = Orders::find($id);
 $order->delete();
 return Response::json(['deleted' => true]);
   }
