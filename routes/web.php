@@ -36,9 +36,9 @@ Route::get('/recipes', 'RecipeController@index' );
 Route::post('/recipes', 'RecipeController@create');
 
 //Recipe singular routes
-Route::get('/recipe/{id}', 'RecipeController@show');
-Route::put('/recipe/{id}', 'RecipeController@update');
-Route::delete('/recipe/{id}', 'RecipeController@destroy');
+Route::get('/recipes/{id}', 'RecipeController@show');
+Route::put('/recipes/{id}', 'RecipeController@update');
+Route::delete('/recipes/{id}', 'RecipeController@destroy');
 
 
 //HTML/view responses

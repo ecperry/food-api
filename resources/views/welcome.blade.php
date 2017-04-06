@@ -79,17 +79,15 @@
             @endif
 
             <div class="content">
+              <img src="logo.png">
                 <div class="title m-b-md">
                     Food Business API
                 </div>
                 <div class= "m-b-md">
                   Your easy management system for tracking orders, recipes, and customers.
                 </div>
-
-                <img src="../../photos/logo.png">
-
                 <div class="links">
-                    <a href="https://emilythecopywriter.com">Portfolio</a>
+                    <a href="https://www.emilythecopywriter.com">Portfolio</a>
                     <a href="https://ecperry.gitbooks.io/food-api/">API Documentation</a>
                 </div>
             </div>

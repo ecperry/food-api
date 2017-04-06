@@ -49,7 +49,7 @@ public function destroy ($id) {
 //DELETE /orders/$id
 // remove a single order
 
-$order = Orders::find($id);
+$order = Order::find($id);
 $order->delete();
 return Response::json(['deleted' => true]);
   }
