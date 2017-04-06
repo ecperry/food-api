@@ -20,7 +20,7 @@ class CreateRecipesTable extends Migration
         $table->string('season');
         $table->integer('difficulty');
         $table->timestamps();
-      });
+      });create_recipes
     }
 
     /**
