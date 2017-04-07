@@ -11,6 +11,11 @@ class CreateOrdersTable extends Migration
      *
      * @return void
      */
+
+  // in the up() function, we're using Schema to build the headers for our orders table
+  //the $table is a variable refering to the table we're building
+  //after the arrow, I've specified data type and header of the column 
+
     public function up()
     {
       Schema::create('orders', function (Blueprint $table) {

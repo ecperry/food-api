@@ -14,8 +14,7 @@ class CustomerController extends Controller
 
   {
     // GET request
-    // list
-
+    // list customers
     $customers = Customer::all();
     return Response::json($customers);
 }
@@ -28,16 +27,20 @@ Customer::create($request->all());
 return Response::json(['created => true']);
 }
 
+public function show ($id)
 
-public function show ($id) {
+{
 
   // GET /customer/$id
   // show a single game info
  $customers = Customer::find($id);
  return Response::json($customers);
+
 }
 
-public function update (Request $request, $id) {
+public function update (Request $request, $id)
+{
+
 // DELETE /customer/$id
 // update a single game
 $customers = Customer::find($id);
@@ -46,12 +49,15 @@ return Response::json(['updated' => $success]);
 
 }
 
-public function destroy ($id) {
+public function destroy ($id)
+{
+
 //DELETE /customer/$id
 // remove a single customer
 
 $customers = Customer::find($id);
 $customers->delete();
 return Response::json(['deleted' => true]);
+
   }
 }

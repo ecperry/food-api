@@ -9,34 +9,39 @@ use Illuminate\Support\Facades\Response;
 class OrdersController extends Controller
 {
 
-  public function index ()
+public function index ()
 
-  {
+{
     // GET request
-    // list
-
+    // list orders
     $orders = Order::all();
     return Response::json($orders);
 }
 
 public function create(Request $request)
+
 {
   //POST /orders
   //create new order
 Order::create($request->all());
 return Response::json(['created => true']);
+
 }
 
+public function show ($id)
 
-public function show ($id) {
+{
 
   // GET /orders/$id
   // show a single game info
  $order = Order::find($id);
  return Response::json($order);
+
 }
 
-public function update (Request $request, $id) {
+public function update (Request $request, $id)
+
+{
 // DELETE /orders/$id
 // update a single game
 $order = Order::find($id);
@@ -45,12 +50,14 @@ return Response::json(['updated' => $success]);
 
 }
 
-public function destroy ($id) {
+public function destroy ($id)
+
+{
 //DELETE /orders/$id
 // remove a single order
-
 $order = Order::find($id);
 $order->delete();
 return Response::json(['deleted' => true]);
+
   }
 }

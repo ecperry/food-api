@@ -65,6 +65,7 @@
 
         </style>
     </head>
+  <!-- Start of HTML structure for welcome page--> 
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))

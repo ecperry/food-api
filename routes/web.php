@@ -1,6 +1,6 @@
 <?php
 
-/*
+/* LARAVEL COMMENT
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -11,13 +11,15 @@
 |
 */
 
+/* the collection and singular routes for each table are listed below */
+
 use Illuminate\Http\Request;
 
-//customers table collection routes
+//Customers table collection routes
 Route::get('/customers', 'CustomerController@index');
 Route::post('/customers', 'CustomerController@create');
 
-//customer singular routes
+//Customer singular routes
 Route::get('/customers/{id}', 'CustomerController@show');
 Route::put('/customers/{id}', 'CustomerController@update');
 Route::delete('/customers/{id}', 'CustomerController@destroy');
@@ -42,11 +44,9 @@ Route::delete('/recipes/{id}', 'RecipeController@destroy');
 
 
 //HTML/view responses
-
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Route::get('/styleguide', function(){
 
