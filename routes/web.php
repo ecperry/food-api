@@ -14,7 +14,7 @@
 use Illuminate\Http\Request;
 
 //customers table collection routes
-Route::get('/customers', 'CustomerController@index' );
+Route::get('/customers', 'CustomerController@index');
 Route::post('/customers', 'CustomerController@create');
 
 //customer singular routes
@@ -32,7 +32,7 @@ Route::put('/orders/{id}', 'OrdersController@update');
 Route::delete('/orders/{id}', 'OrdersController@destroy');
 
 //Recipe collection routes
-Route::get('/recipes', 'RecipeController@index' );
+Route::get('/recipes', 'RecipeController@index');
 Route::post('/recipes', 'RecipeController@create');
 
 //Recipe singular routes
